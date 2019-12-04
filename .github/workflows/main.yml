@@ -15,4 +15,6 @@ jobs:
         DEFAULT_BUMP: patch
         RELEASE_BRANCH: master
     - name: echo
-      run: echo ${{ steps.bump_version.outputs.new_tag }}
+      env:
+        VERSION: ${{ steps.bump_version.outputs.new_tag }} 
+      run: echo $VERSION
