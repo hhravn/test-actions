@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: bump_version
+    - name: Bump and tag version
+      id: bump_version
       uses: anothrNick/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -16,6 +17,6 @@ jobs:
         RELEASE_BRANCH: master
     - name: echo
       env:
-        VERSION: ${{ steps.bump_version.outputs }} 
+        VERSION: ${{ steps.bump_version.outputs.new_tag }} 
       run: echo ${VERSION}
       shell: bash
