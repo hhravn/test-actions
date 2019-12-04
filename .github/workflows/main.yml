@@ -17,4 +17,5 @@ jobs:
     - name: echo
       env:
         VERSION: ${{ steps.bump_version.outputs }} 
-      run: echo $VERSION
+      run: echo ${VERSION}
+      shell: bash
