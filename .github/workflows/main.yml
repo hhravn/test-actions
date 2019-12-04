@@ -14,3 +14,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
         BUMP: patch
+        WITH_V: false
