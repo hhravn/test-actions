@@ -11,9 +11,6 @@ jobs:
       with:
         fetch-depth: 0
     - name: Bump version and push tag
-      uses: kimgault/github-tag-action@latest
+      uses: ace-teknologi/github-tag-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: master
-        BUMP: patch
-        WITH_V: false
