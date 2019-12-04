@@ -11,7 +11,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Bump version and push tag
-      uses: kimgault/github-tag-action@v1.0
+      uses: kimgault/github-tag-action@latest
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: master
