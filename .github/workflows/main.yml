@@ -16,5 +16,5 @@ jobs:
         RELEASE_BRANCH: master
     - name: echo
       env:
-        VERSION: ${{ steps.bump_version.outputs.new_tag }} 
+        VERSION: ${{ steps.bump_version.outputs }} 
       run: echo $VERSION
